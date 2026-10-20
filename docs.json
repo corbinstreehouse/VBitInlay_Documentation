@@ -16,7 +16,6 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
               "quickstart",
               "development"
             ]
@@ -24,6 +23,7 @@
           {
             "group": "Customization",
             "pages": [
+              "index",
               "essentials/settings",
               "essentials/navigation"
             ]
