@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Corbin's Workshop Documentation",
+  "name": "VBit Inlay Documentation",
   "colors": {
-    "primary": "#3F8EF4",
+    "primary": "#388BF6",
     "light": "#6AA9F7",
     "dark": "#006FFF"
   },
