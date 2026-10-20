@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Foo",
         "groups": [
           {
             "group": "Getting started",
@@ -71,16 +71,11 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Corbin's Workshop",
+          "href": "https://www.corbinsworkshop.com",
+          "icon": ""
         }
-      ]
+            ]
     }
   },
   "logo": {
