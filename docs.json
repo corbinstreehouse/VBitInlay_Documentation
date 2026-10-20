@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "VBit Inlay Documentation",
   "colors": {
-    "primary": "#388BF6",
-    "light": "#6AA9F7",
-    "dark": "#006FFF"
+    "primary": "#388BF5",
+    "light": "#6AA9F6",
+    "dark": "#006FFE"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -123,6 +123,7 @@
     "eyebrows": "breadcrumbs"
   },
   "appearance": {
-    "default": "light"
+    "default": "light",
+    "strict": true
   }
 }
