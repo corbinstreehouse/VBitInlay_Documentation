@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Corbin's Workshop Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3F8EF4",
+    "light": "#6AA9F7",
+    "dark": "#006FFF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -102,15 +102,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
@@ -118,5 +118,11 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "appearance": {
+    "default": "light"
   }
 }
