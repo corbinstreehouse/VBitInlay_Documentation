@@ -1,0 +1,26 @@
+---
+title: "Parameters"
+---
+
+import Footer from "/shared/footer.mdx";
+
+
+Bits that work with this technique are “Engrave/Chamfer mills” and “Tapered Mills“. “Tapered Mills” (ie: a tapered ball nose / TBN) will only work with the Pencil operation (3D Toolpaths) and will not work with the Engrave toolpath for 2D flat inlays. However, there is an easy work around to use a tapered ball nose (TBN) with Engrave, noted below.
+
+I prefer fine detailed inlays, and use a 15 degree v-bit: Amana 15-degree v-bit. This bit has a 15 degree inclusive angle (the total angle), but I’ve also had good success with a Tapered Ball Nose.
+
+Bits are usually (but not always) named and sold by the Inclusive Angle, which is the total angle. The Taper Angle is half the inclusive angle, as shown to the right. Fusion will name bits based on the Taper Angle — so if you see it named as a 30 degree bit in Fusion, don’t get confused and put 30 degrees as the Parameter when it is really 60; things won’t work right!
+
+
+However, some Tapered Ball Mills, such as Freud 72-400 5.4° x 1/16″ Tapered Ball Tip, are listed and sold by the taper angle! You will need to input the inclusive angle: 5.4°x2=10.8°. Just be aware of this, as it is important if you manually input the bit angle.
+
+Tapered Ball Nose Mills (TBN bits): These will work fine with 3D toolpaths, but they will not work with the 2D “Engrave” Toolpath for flat inlays. You can copy your TBN tool and set the type to be an “Engrave/Chamfer mill” and set the tip diameter to be the ball diameter. Then it will work as for Engrave / 2D Toolpaths, but note that it will act like it has a flat bottom instead of a ball. For a steep TBN, this won’t cause much discrepancy with what it cuts.
+
+
+IMPORTANT: Pure V-bits, like shown below, will not work with the Pencil or 2D Pocket op (toolpath generation will fail on the V-bit pass) unless you set a Tip Diameter. You can use a really small Tip Diameter, like 0.001″, to get it to work, and it shouldn’t affect the inlay. If you are using metric, type in exactly 0.001″ and hit enter, and it will convert it to 0.0254mm. If you put too small a value, it will never finish computing (ie: 0.0001″ will take forever).
+
+
+Some people have their v-bits as a Spot Drill – you will have to re-create the bit as a Engrave/Chamfer Mill.
+
+
+<Footer />

@@ -7,7 +7,7 @@
     "light": "#FF0000",
     "dark": "#006FFE"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "",
   "navigation": {
     "tabs": [
       {
@@ -22,19 +22,24 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Learn",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "terminology",
+              "vector_design"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "VBit Inlay / VCarve Command",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "vbit_inlay_running",
+              "vbit_inlay_feature_tab",
+              "vbit_inlay_toolpaths_tab"
+            ]
+          },
+          {
+            "group": "Extras",
+            "pages": [
+              "known_parameter_list"
             ]
           },
           {

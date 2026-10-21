@@ -1,0 +1,92 @@
+---
+title: "Known Parameter List"
+---
+
+import Footer from "/shared/footer.mdx";
+
+Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric VCarve. Parameters vary by bit selection, wood species, wood orientation (face grain vs end grain), and the particular CNC machine. These are proven cut results that have worked for people. If you have something that works, [email me](mailto:corbin@corbinsworkshop.com)!
+
+<AccordionGroup>
+  <Accordion title="15 Degree Engraving 0.005 Tip Width - Amana 45611-K" defaultOpen>
+[Purchase the bit: Amazon](https://amzn.to/4oeJ1Zo)
+<AccordionGroup>
+
+  <Accordion title="Feeds and Speeds">
+ * Walnut face grain: 12,000 RPM / Feed: 15 IPM / Plunge: 15 IPM
+ * Cherry face grain: 14,000 RPM / Feed: 20 IPM / Plunge: 15 IPM
+ * Hardwood end grain (or less details): 18,000 RPM / Feed: 54 IPM / Plunge: 18 IPM
+ * Stepover: 0.0024 in    
+  </Accordion>
+
+  <Accordion title="Parameters for 0.100\&quot; depth inlay">
+  * `inlay_depth`: 0.100"
+  * `inlay_fit_adjustment`: 0.060" (up to 0.070")
+  * `plug_surface_gap`: 0.050"
+  * `plug_base_thickness`: 0.250    
+  </Accordion>
+
+<Accordion title="Parameters for 0.240\&quot; depth inlay">
+  * `inlay_depth`: 0.240"
+  * `inlay_fit_adjustment`: 0.090"
+  * `plug_surface_gap`: 0.070"
+  * `plug_base_thickness`: 0.240"   
+  * `plug_fuzzy_cleanup`: 0.008" 
+  </Accordion>
+
+</AccordionGroup>
+  </Accordion>
+
+</AccordionGroup>
+<AccordionGroup>
+  
+  <Accordion title="SpeTool W01005 5.26 Deg Tapered Angle Ball Nose 0.25mm Radius" defaultOpen>
+ * [Purchase the bit: Amazon](https://amzn.to/4aNb1zP)
+
+<AccordionGroup>
+
+  <Accordion title="Feeds and Speeds">
+  * End Grain: 18,000 RPM / Feed; 25.2 IPM / Plunge: 12 IPM
+  * Stepover: 0.0024 in    
+  </Accordion>
+
+<Accordion title="Parameters for 0.240\&quot; depth inlay">
+  * `inlay_depth`: 0.240"
+  * `inlay_fit_adjustment`: 0.000" to 0.005"
+  </Accordion>
+
+  <Accordion title="Bit Tool Setup">
+    ![Setup](https://www.corbinsworkshop.com/wp-content/uploads/2026/01/TBN-as-Engrave-Bit-scaled.png)
+  </Accordion>
+
+</AccordionGroup>
+
+</Accordion>
+
+</AccordionGroup>
+<AccordionGroup>
+  <Accordion title="30° 2 Flute V-Groove Bit - Bits&Bits (425-VG30)" defaultOpen>
+ * [Bit link](https://bitsbits.com/product/425-vg30/)
+ * 30 degree v-bit, 0" tip width (you must set a small tip width in the tool setup!)
+ <AccordionGroup>
+
+  <Accordion title="Feeds and Speeds">
+  * Facegrain: 16,000 RPM / Feed: 40 IPM / Plunge: TBD
+  * Feed optimization: 5 degree change, 10 IPM
+  </Accordion>
+
+  <Accordion title="Parameters for 0.240\&quot; depth inlay">
+  * `inlay_fit_adjustment`: 0.030"
+  </Accordion>
+
+</AccordionGroup>
+  </Accordion>
+
+
+</AccordionGroup>
+
+
+
+
+
+
+<Footer />
