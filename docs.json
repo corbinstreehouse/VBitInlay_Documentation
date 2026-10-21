@@ -16,14 +16,14 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
-              "installation"
+              "index",
+              "installation",
+              "video_references"
             ]
           },
           {
             "group": "Customization",
             "pages": [
-              "index",
               "essentials/settings",
               "essentials/navigation"
             ]
