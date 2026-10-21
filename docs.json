@@ -3,21 +3,21 @@
   "theme": "mint",
   "name": "VBit Inlay Documentation",
   "colors": {
-    "primary": "#388BF5",
-    "light": "#6AA9F6",
+    "primary": "#393939",
+    "light": "#FF0000",
     "dark": "#006FFE"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Foo",
+        "tab": "VBit Inlay Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get Started",
             "pages": [
-              "quickstart",
-              "development"
+              "introduction",
+              "installation"
             ]
           },
           {
@@ -46,53 +46,25 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Corbin's Workshop",
-          "href": "https://www.corbinsworkshop.com",
-          "icon": ""
-        }
-            ]
-    }
-  },
+    ]
+    },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/corbins_workshop_rectangle_logo.svg",
+    "dark": "/logo/corbins_workshop_rectangle_logo.svg",
+    "href": "https://www.corbinsworkshop.com"   
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Support Email",
+        "href": "mailto:corbin@corbinsworkshop.com"
       }
     ],
-    "primary": {
+    "primary": {  
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Back to Corbin's Workshop",
+      "href": "https://www.corbinsworkshop.com"
     }
   },
   "contextual": {

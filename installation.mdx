@@ -1,0 +1,67 @@
+---
+title: "Installation"
+---
+
+import Footer from "/shared/footer.mdx";
+
+<AccordionGroup>
+
+  <Accordion icon="github" title="Manual Install" defaultOpen>
+
+1. Goto the [VBit Inlay Product](https://www.corbinsworkshop.com/shop/vcarve-inlay-plugin-for-autodesk-fusion-360/) on Corbin's Workshop
+1. Add to Cart and Proceed to Checkout
+1. Optional: [Purchase a License](https://www.corbinsworkshop.com/shop/license-vcarve-inlay-plugin-for-autodesk-fusion-360/) - you can try it first and purchase later!
+1. Download the zip file onto your computer
+2. Extract it into your Fusion add-ins folder:
+   - Windows: `%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns`
+   - Mac: `~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns`
+
+  </Accordion>
+
+  <Accordion icon="github" title="Autodesk's Installer" defaultOpen>
+  1. Go to: [VBit Inlay on the Design and Make Marketplace](https://apps.autodesk.com/FUSION/en/Detail/Index?id=913285342444407417&appLang=en)
+    2. Click on "Start free trial"
+    3. Login to Autodesk's website, and download the version for macOS or Windows
+    4. Run the installer
+  
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+ **Restart Autodesk Fusion** if it was running. 
+</Note>
+
+## Verify
+
+* If the install was successful, the Create menu will have **VBit Inlay / VCarve**:
+
+<Frame>
+  <img
+    src="/images/vbit_menu_item.png"
+    alt="Screenshot of vbit inlay menu item."
+    style={{ borderRadius: '0.5rem' }}
+  />
+</Frame>
+
+* In Fusion, **Shift-S** will bring up the Add-In window, and VBit Inlay will appear in the list:
+
+<Frame>
+  <img
+    src="/images/vbit_inlay_in_addin.png"
+    alt="Screenshot of vbit inlay menu item."
+    style={{ borderRadius: '0.5rem' }}
+  />
+</Frame>
+
+<Tip>
+  Check "Run on startup" to have it start everytime you launch Fusion.
+</Tip>
+
+
+## Updates
+
+You only have to install it once. After it is installed, VBit Inlay will automatically check corbinsworkshop.com for an update an automatically install it. This happens once per launch of Fusion.
+
+Fusion only reads the version number on startup, so the version may appear outdated until you restart Fusion.
+
+<Footer />

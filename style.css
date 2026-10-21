@@ -1,0 +1,6 @@
+/* Make the navbar logo larger (Mintlify default is ~1.5rem tall) */
+#navbar a[href*="corbinsworkshop.com"] img,
+#navbar img.nav-logo {
+  height: 3rem;
+  width: auto;
+}
