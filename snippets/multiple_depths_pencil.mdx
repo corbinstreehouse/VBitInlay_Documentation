@@ -1,0 +1,12 @@
+## Multiple Depths or Roughing with Pencil
+
+Most toolpaths have "Multiple Depths", but Pencil does not. To work around this, right click on the Pencil toolpath and select **Duplicate**. Rename the first one “VBit Rough”. Double click on it to edit it. On the **Passes** tab, check** Stock to Leave** and set the **Axial Stock to Leave** to be half your inlay depth. IE: if your depth is 0.200", set it to 0.100".
+<Frame>
+<img
+    src="images/passes-tab-stock-to-leave.png"
+    alt="3D toolpaths for inlay"
+      className="block mx-auto h-[113px] rounded-lg"
+/>  
+</Frame>
+
+Doing this will generate a light first cut. The plug generally cuts deeper, and you may need to do two roughing passes with varying stock to leave.

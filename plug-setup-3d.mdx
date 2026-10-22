@@ -1,0 +1,31 @@
+---
+title: "Plug Setup - 3D"
+---
+
+import Footer from "/shared/footer.mdx";
+import Pencil from "/snippets/multiple_depths_pencil.mdx";
+
+## Setup
+
+As before, the Plug Setup is nearly the same as the [2D Plug Setup](/plug-setup-2d), while the toolpaths and behavior are similar to the [3D Pocket Setup](/pocket-setup-3d) with the toolpath changes noted below.
+
+
+## 1. VCarve Plug
+
+The Machining Boundary Selection first has the Silhouette added, and then the Sketch Design is second, with it set to "Start Outside".
+
+## 2. Clearance Toolpaths
+
+These are setup identically to the 3D Pocket's clearance toolpaths, except the inset is the `plug_stock_to_leave`, which is a slightly different value based on the full plug depth: `tan(inlay_bit_angle / 2.0) * plug_depth`. The `plug_depth` is `plug_surface_gap + inlay_fit_adjustment` 
+
+## 3. Clearance Rest with VBit
+
+Same as 3D Pocket, but `-plug_stock_to_leave` is the boundary inset.
+
+
+<Pencil>
+</Pencil>
+
+
+
+<Footer />

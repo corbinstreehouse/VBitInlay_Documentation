@@ -58,10 +58,20 @@
           ]
           },
           {
+            "group": "Inlay Fit",
+            "pages": [
+              "inlay_fit_adjustment",
+              "machinability_3d"
+            ]
+          },          
+          {
             "group": "Other",
             "pages": [
               "organization_recs",
-              "known_parameter_list"
+              "known_parameter_list",
+              "known_bugs"
+
+
             ]
           }
         ]
