@@ -4,18 +4,65 @@ title: "Toolpaths Tab"
 
 import Footer from "/shared/footer.mdx";
 
+The toolpaths tab is used for auto-creating manufacturing setups and toolpaths for the pocket and plug.
 
 <img
-  src="/images/feature_tab.png"
+  src="/images/toolpaths_tab.png"
   alt="Feature tab"
   className="block mx-auto h-[400px] rounded-lg"
 />    
 
-## Name
+## Create Pocket Setup & Create Plug Setup
+If checked, the plugin will generate a Manufacturing Setup for the selected options, and pre-populate the correct toolpaths to machine it. The toolpaths will vary depending on if you targeted a Planar Face (2D) or a Solid Body (3D).
+
+## Template
+By default, the plugin will generate toolpaths based on the selected VBit and Clearance Bits. Instead, you can use a template of your own toolpaths, and the plugin will modify only the **machining boundaries** based on the Sketch vector design. Using a template will disable all the other options. See [Templates](/templates) for more information.
+
+## Swap X/Y Axis
+By default the setup will have the X/Y/Z origin be the **bottom front left** of the workpiece and match the orientation of the design. Checking this box will swap the x and y axis in the Setup, as I like to mount long pieces along my y-axis, and cutting boards are usually long in the x-axis. It does it by setting the X-axis to the y-axis in the Setup's WCS.
+<Frame caption="A Setup with the X and Y Axis Swapped">  
+  <img
+    src="/images/swapped_x_y_axis.png"
+    alt="Feature tab"
+    className="block mx-auto h-[200px] rounded-lg"
+  />    
+</Frame>
 
 
+## Add Stock Top Face (2D)
+ For plugs, it is good to face the stock top, and this will add a toolpath to do that, limited to the plug's profile. It uses the largest clearance bit for the surface op, which you can later change.
 
+## VBit Selection
+ The drop down list will show [acceptable v-bits](/vbit_selection) and flat bits that are currently in your document. You can add bits to your document by going to the Manufacturing workspace, click Tool Library, and drag tools into the current document. You can also select these later, but if you select them later you need to ensure you keep the **Tool Angle** in sync. See [VBit Selection](/vbit_selection) for more information.
 
+## Tool Angle
+If you don't select a bit, you must set the tool angle, which assigns the parameter `inlay_bit_angle`. This is used for all the math, and must be set correctly! See [VBit Selection](/vbit_selection) and [Parameters](/parameters) for more information
 
+## Multiple Depths
+If checked, the toolpath generation will check the **Multiple Depths** option in the toolpath, and set the depth to the bit diameter.
+
+## Clearance Bits
+ You can select as many clearance bits as you want, and they will be used from largest to smallest, and finally the VBit will be used to clear any area that the prior bits couldn’t get to. Some **Generic** bits will show up by default, and you can later choose the actual bits you want to use. The diameter is important for 2D toolpaths when using multiple clearance bits, which will be discussed later. For 3D, it is all done via “Rest Machining”, based on the prior operations.
+
+<Frame caption="Clearance Bits">  
+  <img
+    src="/images/clearance_bits.png"
+    alt="Clearance bits"
+    className="block mx-auto h-[200px] rounded-lg"
+  />    
+</Frame>
+
+Unfortunately, Fusion doesn’t currently have an API to show the standard “tool selection” dialog you normally see when creating toolpaths.
+
+## Toolpath Errors
+If you did not pre-select tools, the toolpaths created by the plugin will show up with a red exclamation point and be invalid. If this is the case, you can double click on an operation and manually select the correct tool you want to use. Ensure the tool’s bit angle matches the inlay_bit_angle Parameter. Otherwise, some machining offsets will be incorrect and your inlay will not fit. You can always change the parameter to match the bit you select.
+
+<Frame caption="Red Exclamation Point: No Tool Set">  
+  <img
+    src="/images/invalid_toolpaths.png"
+    alt="Red Exc"
+    className="block mx-auto h-[200px] rounded-lg"
+  />    
+</Frame>
 
 <Footer />

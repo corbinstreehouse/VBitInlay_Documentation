@@ -1,0 +1,37 @@
+---
+title: "Inlay Fit Adjustment"
+description: "Finding the Perfect Inlay Fit"
+---
+
+import Footer from "/shared/footer.mdx";
+
+
+
+The fit of the inlay is controlled by the inlay_fit_adjustment Parameter. If you find a good value that works for a particular bit, inlay, and wood species, let me know! inlay_fit_adjustment can be from 0 to inlay_depth. A value of 0 is a “perfect” inlay, where your inlay plug would be exactly the depth of your inlay pocket. However, that usually gives a gap on the top, and wood will move and squish a bit when you glue and clamp. I use 0.060″ to 0.070″ for an end grain inlay that is 0.100″ deep with a 15 degree v-bit. It’s a surprisingly high value!
+
+See VBit Inlay Parameter List for some known values to start with, and watch this video for how to find a good fit.
+
+There are two main things that can go wrong when you fit an inlay:
+
+1. Gaps on the top
+
+If you create an inlay, and it has visible gaps on the top, adjust the inlay_fit_adjustment to be larger (probably by 0.010″ increments) and try again. The issue is the inlay is bottoming out, preventing it from closing the gaps on the top.
+
+
+2. Inlay doesn’t go deep enough
+
+If you create an inlay, and you have trouble fitting it in, or it does fit in with no visible gaps on top, cut it in half, and make sure it doesn’t have gaps underneath the inlay. If it does, adjust the inlay_fit_adjustment to be smaller until it no longer has a gap at the bottom or goes in as deep as you’d like (yeah, some people leave a glue gap). The issue is the inlay is not “steep” enough, and needs to have a deeper plug part.
+
+
+3. Other issues
+
+If you see gaps on the top of the inlay and underneath the inlay when you cut it in half, then you likely have an issue with your machine or the design itself:
+
+Design issues: The design may have parts that are chipping off during machining and the design has to be adjusted a bit to avoid this.
+Machine Squareness: Ensure you can cut a 5″x5″ square and that it actually measured 5″x5″ with calipers.
+Machine Tram: Ensure that your machine is trammed correctly.
+Feeds and Speeds: Incorrect feeds and speeds can cause jerkiness in CNC movement that will break off bits of the inlay. Dialing in your feeds and speeds is the only way to fix this.
+Machine Acceleration: Turning down your machine’s acceleration settings can greatly improve inlays.
+Clamping/press: Proper clamping with a press is generally required to get a really uniform inlay. I have only done small inlays, and use clamps. Eventually I’ll do some larger ones and discuss ways to make a press.
+
+<Footer />

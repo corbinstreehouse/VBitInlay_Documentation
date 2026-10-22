@@ -33,21 +33,35 @@
             "pages": [
               "vbit_inlay_running",
               "vbit_inlay_feature_tab",
-              "vbit_inlay_toolpaths_tab"
-            ]
+              "vbit_inlay_toolpaths_tab",
+              "vbit_selection",
+              {
+                "group": "Design Elements",
+                "expanded": true,
+                "pages": [
+                  "design-components",
+                  "parameters"
+                ]
+              },
+              {
+                "group": "Manufacturing Setups",
+                "expanded": true,
+                "pages": [
+                  "pocket-setup-2d",
+                  "plug-setup-2d",
+                  "pocket-setup-3d",
+                  "plug-setup-3d"
+                ]
+              }
+
+
+          ]
           },
           {
-            "group": "Extras",
+            "group": "Other",
             "pages": [
+              "organization_recs",
               "known_parameter_list"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
             ]
           }
         ]
