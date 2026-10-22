@@ -69,7 +69,8 @@
             "pages": [
               "organization_recs",
               "known_parameter_list",
-              "known_bugs"
+              "known_bugs",
+              "bug-reports"
 
 
             ]
