@@ -1,0 +1,28 @@
+---
+title: "Round All Corners"
+tag: "New!"
+---
+
+## Round All Corners
+
+Sometimes it is easier to simply process all curves in the entire Sketch. When in the Design environment, you can click **Modify->Round All Corners**:
+
+<Frame>
+<img
+  src="/images/round_corners/round_all_corners_design.png"
+  alt="Feature tab"
+  className="block mx-auto h-[187px] rounded-lg"
+/>  
+</Frame>
+
+When you run it, yuo can select a Sketch from the sidebar browser to process all Sketch Curves in that entire sketch:
+
+<Frame>
+<img
+  src="/images/round_corners/round_all_corners_sel.png"
+  alt="Feature tab"
+  className="block mx-auto rounded-lg"
+/>  
+</Frame>
+
+Internally, Round All Corners does four "Round offset" calls in order: Out then back In. In, then back Out. 

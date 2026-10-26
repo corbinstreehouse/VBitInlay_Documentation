@@ -1,0 +1,53 @@
+---
+title: "Offset - Round Corners"
+tag: "New!"
+---
+
+This only shows up in the Sketch environment. When you are actively editing a sketch, the Modify drop down will have two new commands:
+
+<Frame>
+<img
+  src="/images/round_corners/sketch_env_commands.png"
+  alt="Feature tab"
+  className="block mx-auto h-[297px] rounded-lg"
+/>  
+</Frame>
+
+
+### Offset - Rounded Corners
+
+Fusion already has a built-in Offset command, but it explictly creates sharp corner offsets. **Rounded Corners** works simlar, but rounds the corners when it does the offset.
+
+<Frame>
+<img
+  src="/images/round_corners/offset_rounded_corners.png"
+  alt="Feature tab"
+  className="block mx-auto h-[223px] rounded-lg"
+/>  
+</Frame>
+
+You can input a positive (outward) direction or negative (inward) direction and optionally delete the original curve. For multiple curves, each chained curve is operated on seperately. 
+
+<Note>
+    A "group offset" option may be added later.
+</Note>
+ 
+ <Columns cols={2}>
+<Frame caption="Example input">
+<img
+  src="/images/round_corners/offset_rounded_corners_example.png"
+  alt="Feature tab"
+  className="block mx-auto rounded-lg"
+/>  
+</Frame>
+
+<Frame caption="Example result">
+<img
+  src="/images/round_corners/offset_rounded_corners_example_result.png"
+  alt="Feature tab"
+  className="block mx-auto  rounded-lg"
+/>  
+</Frame>
+
+</Columns>
+

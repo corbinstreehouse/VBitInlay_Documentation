@@ -1,0 +1,41 @@
+---
+title: "Overview"
+---
+
+## Concept
+
+Sketches frequently need to be modified for proper CNC machining and inlays to fit. More specificaly, you generally need to round over the inside corners to be at least the radius of the CNC bit diameter. For inlays, you *might* need to round over all sharp corners to at least have at least a radius equal to the bit tip diameter (specfically, half the tip diameter), if the bit has a diameter or is a tapered ball nose (TBN).
+
+The VBit Inlay pluging adds several commands to make this easier to do.
+
+## Sketch Editing Commands
+
+When you are actively editing a sketch, the Modify drop down will have two new commands:
+
+
+<Columns cols={2}>
+  <Card title="Sketch Environment">
+  <img
+  src="/images/round_corners/sketch_env_commands.png"
+  alt="Feature tab"
+  className="block mx-auto h-[297px] rounded-lg"
+/>  
+  </Card>
+  <Card title="Design Environment" icon="panel-right-close">
+  <img
+  src="/images/round_corners/round_all_corners_design.png"
+  alt="Feature tab"
+  className="block mx-auto h-[187px] rounded-lg"
+/>  
+  </Card>
+</Columns>
+
+<Frame>
+
+</Frame>
+
+### See: [Offset - Round Corners](/round_offset_command) for the Sketch Environment
+
+### See: [Round Corners](/round_corners_command) for the Sketch Environment
+
+### See: [Round All Corners](/round_all_corners_command) for the Design Environment

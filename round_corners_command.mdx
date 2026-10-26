@@ -1,0 +1,38 @@
+---
+title: "Round Corners"
+tag: "New!"
+---
+
+This only shows up in the Sketch environment. When you are actively editing a sketch, the Modify drop down will have two new commands:
+
+<Frame>
+<img
+  src="/images/round_corners/sketch_env_commands.png"
+  alt="Feature tab"
+  className="block mx-auto h-[297px] rounded-lg"
+/>  
+</Frame>
+
+
+Round Corners is similar to Fusion's built in Fillet, however, it will quickly process all selected curves and always attempt to round over corners, whereas Fillet fails in many instances where it can't produce a "clean" result.
+<Columns cols={2}>
+<Frame>
+<img
+  src="/images/round_corners/round_corners.png"
+  alt="Feature tab"
+  className="block mx-auto rounded-lg"
+/>  
+</Frame>
+
+<Frame>
+<img
+  src="/images/round_corners/round_corners_result.png"
+  alt="Feature tab"
+  className="block mx-auto rounded-lg"
+/>  
+</Frame>
+
+</Columns>
+
+Failures are shown in red, just like Round Offset.
+

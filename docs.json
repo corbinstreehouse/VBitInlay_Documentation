@@ -18,6 +18,7 @@
             "pages": [
               "index",
               "installation",
+              "quickstart",
               "video_references"
             ]
           },
@@ -30,11 +31,20 @@
           },
           {
             "group": "VBit Inlay / VCarve Command",
+            
             "pages": [
               "vbit_inlay_running",
               "vbit_inlay_feature_tab",
-              "vbit_inlay_toolpaths_tab",
-              "vbit_selection",
+
+              {
+                "group": "Toolpaths",
+                "expanded": true,
+                "pages": [
+                  "vbit_inlay_toolpaths_tab",
+                  "adding_document_bits",
+                  "vbit_selection"
+                ]
+              },
               {
                 "group": "Design Elements",
                 "expanded": true,
@@ -64,6 +74,17 @@
               "machinability_3d"
             ]
           },          
+          
+          {
+            "group": "Sketch Editing Commands",
+            "pages": [
+                "sketch_commands_overview",
+                "round_offset_command",
+                "round_corners_command",
+                "round_corners_behavior"]
+
+          },
+
           {
             "group": "Other",
             "pages": [

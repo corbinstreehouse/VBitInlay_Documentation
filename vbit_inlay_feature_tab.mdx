@@ -65,8 +65,11 @@ This is the “glue gap” underneath the plug when in the inlay. You will need 
 ## Plug Base Thickness
  How thick the backing of the plug will be to hold it together. You probably want at least 0.25″.
 
+## Plug Boundary Offset
+This will be the increased sides size the plug around the main plug part itself. This is useful to set it to be at least your clearance bit's diameter, so the bit can reach all the way around the plug. It is also useful if you want to have some offset around your shape. By default it is rectangular, but in the future it may be more organic.
+
 ## Plug Stock Offset
- The plug stock will be created with an offset of this value. Have it be large enough of a value for you to clamp the plug down (ie: 0.200″ to 0.300″) from the top, or have it be 0 if you want to hold your plug down with some other manner (ie: tape/vacuum/etc). You can later change this by editing the generated sketch for the plug stock.
+ The plug stock will be a rectangular stock size that fits around the plug. It will be offsset from the plug by this amount. Have it be large enough of a value for you to clamp the plug down (ie: 0.200″ to 0.300″) from the top, or have it be 0 if you want to hold your plug down with some other manner (ie: tape/vacuum/etc). You can later change this by editing the generated sketch for the plug stock. Sometimes, you want to make the offset large enough to clamp down, and also perform a cutout of the plug with tabs.
 
 ## Flip Plug
  The plug is created right above the female pocket. If Flip Plug is checked, the plugin will flip the plug “upright”. It will also do a “Capture Position” in the Timeline. If the plug is not flipped, the generated Setup for the plug will be upside down, and require some correction by the user to flip the z-axis orientation.

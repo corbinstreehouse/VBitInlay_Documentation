@@ -4,7 +4,6 @@ title: "VBit Selection"
 
 import Footer from "/shared/footer.mdx";
 
-
 ### Acceptable Bit Types
 
 Bits that work with VCarving are **Engrave/Chamfer mills** and **Tapered Mills**. **Tapered Mills** (ie: a Tapered Ball Nose / TBN) will only work with the Pencil operation (3D Toolpaths) and will not work with the Engrave toolpath for 2D flat inlays. However, there is an easy work around to use a tapered ball nose (TBN) with Engrave, noted below.
@@ -50,8 +49,6 @@ Pure V-bits, like shown below, will not work with the Pencil or 2D Pocket Toolpa
   />    
 </Frame>
 
-
-
 ### Tapered Ball Nose (TBN) for Engraving
 
 TBN bits work fine with 3D toolpaths, but Fusion will allow them for a 2D “Engrave” Toolpath for flat inlays. 
@@ -74,6 +71,19 @@ TBN bits work fine with 3D toolpaths, but Fusion will allow them for a 2D “Eng
 For fine detailed inlays, and use a 15 degree v-bit: [Amana 15-degree v-bit](https://amzn.to/4oeJ1Zo) or similar. This bit has a 15 degree inclusive angle and a small 0.005" tip diameter. Disadvantage: I've accidentally broken the tip of this fine bit one time. 
 
 The [SPE W01005 5.26 Deg Tapered Ball Nose](https://amzn.to/4aNb1zP) is affordable and cuts really well. TBN bits are generally stronger than a v-bit, and less likely to break, especially . They also tend to be a spiral upcut bit, which clears chips better. Disadvantage: you have to round over all the corners in your design by at least the radius of the bit.
+
+### Changing a Toolpath's Tool / Bit
+
+<Danger>
+Be careful if you manually select a different VBit tool in your Toolpaths!
+</Danger>
+
+If you change the tool, be sure to keep the `inlay_bit_angle` [Parameter](/parameters) in sync. You must go to "Change Parameters" in the design space and udpate it, if you pick a bit with a different angle! This is all automatic if you selected the bit when the plugin runs.    
+
+<Note>
+You must also use the same VBit for the pocket and the plug.
+</Note>
+
 
 
 <Footer />

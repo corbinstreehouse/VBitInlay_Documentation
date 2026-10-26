@@ -32,8 +32,32 @@ By default the setup will have the X/Y/Z origin be the **bottom front left** of 
 ## Add Stock Top Face (2D)
  For plugs, it is good to face the stock top, and this will add a toolpath to do that, limited to the plug's profile. It uses the largest clearance bit for the surface op, which you can later change.
 
+## Add Profile Cutout (2D)
+
+ <img
+    src="/images/profile_cutout.png"
+    alt="Feature tab"
+    className="block mx-auto h-[46px]  rounded-lg"
+  />
+
+If you select a bit, a generic profile toolpath will cutout the plug with tabs. It will be slightly inset to cut out the areas 2D toolpaths leave.
+
 ## VBit Selection
- The drop down list will show [acceptable v-bits](/vbit_selection) and flat bits that are currently in your document. You can add bits to your document by going to the Manufacturing workspace, click Tool Library, and drag tools into the current document. You can also select these later, but if you select them later you need to ensure you keep the **Tool Angle** in sync. See [VBit Selection](/vbit_selection) for more information.
+ The drop down list will show [acceptable v-bits](/vbit_selection) and flat bits that are **currently in your document**.
+ 
+<Frame caption="The VBit dropdown">  
+  <img
+    src="/images/vbit_dropdown.png"
+    alt="Feature tab"
+    className="block mx-auto h-[181px] rounded-lg"
+  />    
+</Frame>
+
+See [Adding Document Bits](/adding_document_bits) for how to get your own tools to show up here.
+
+ Several generic v-bits / engraving bits have been added as an example below your document bits.
+
+ You can can also choose the v-bit later, but if you select it later you need to ensure you keep the **Tool Angle** Parameter in sync. See [VBit Selection](/vbit_selection) for more information.
 
 ## Tool Angle
 If you don't select a bit, you must set the tool angle, which assigns the parameter `inlay_bit_angle`. This is used for all the math, and must be set correctly! See [VBit Selection](/vbit_selection) and [Parameters](/parameters) for more information

@@ -1,0 +1,33 @@
+---
+title: "Behavior Notes"
+---
+
+## Failed Curves
+
+If an offset could not be done the sketch curves will be highlighted in red. After you hit ok, the offending sketch curves will be selected, so you can choose to do something with them (ie: delete them or modify them).
+
+For example, an offset of **-0.3"** would produduce no result for this selected curve, as it would collapse to nothing:
+
+<Frame>
+<img
+  src="/images/round_corners/example_failure.png"
+  alt="Feature tab"
+  className="block mx-auto h-[390px] rounded-lg"
+/>  
+</Frame>
+
+<Note>
+    Let me know if you'd like an option to simply delete these failed curves!
+</Note>
+
+## Speed
+Fusion is incredibly slow when processing large and complex sketches, so a progress dialog will appear if the processing starts takign more than 1 second. Cancelling the progress will leave what was partially done; simply hit Undo to undo this work.
+
+The slowest part is Fusion's API for adding and deleting curves; all internal logic is performed on internal data structures, which is quite fast.
+
+## Chain Selection
+*Chain selection* only works after selecting one sketch line; doing it dynamically was prohibitively slow, as simply having a callback for when the user selects an item makes things slow. So, the behavior is slightly differnt than Fusion's native Offset command.
+
+## Profiles vs Sketch Curves
+The algorithm only works on curves; it could work on Fusion's Profiles, (I have it implemented but not turned on), but profiles are complex and require splitting up paths. It just seems like the incorrect way to do things, and I want to promote "clean vector" designs to begin with. 
+
