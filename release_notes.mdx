@@ -1,0 +1,136 @@
+---
+title: "Release Notes"
+---
+
+import Footer from "/shared/footer.mdx";
+
+### 1.22 - Oct 26, 2026
+* New Command Features: [Sketch Editing Commands for CNC](/sketch_commands_overview)
+* New Command: [Round Corners](/round_corners_command) - while Sketch editing
+* New Command: [Round All Corners](/round_all_corners_command) - everything in a Sketch
+* New Command: [Offset - Round Corners](/round_offset_command) - offsets that are better for CNC
+* New Feature: [Plug Boundary Offset](/vbit_inlay_feature_tab#plug-boundary-offset) - customize how much larger the plug that is created is.
+* New Feature: Plug profile cutout option
+* Update: New progress dialog is shown when creating the inlays
+* Update: Generic VBit Tools are now provided to more quickly get you running
+* Update: New documentation! Mostly re-written with updated screen shots.
+* Update: Renamed some commands from VBit to VCarve to be more clear as to what is happening
+* Update: new icons
+* Bug Fix: Duplicate tools when running the command multiple times
+* Bug Fix: Tolerance warning fixed (new to the last Fusion update)
+* Bug Fix: 3D Plug toolpaths for the VBit Rest were using the outset sketch instead of the silhouette, causing more work than necessary
+* Other: better exception handling, and lots of other minor stuff
+
+
+### 1.21 - Sept 30, 2026
+* Update: Text elements work much better and are more robust
+* Bug Fix: "Error: 2 : InternalValidationError : data_->execute(&obj, apiName…"
+* Bug Fix: "Body not found to extrude through"
+* Beta code: New every-other-profile selection routine (not enabled)
+* Attempted bug fix: wrap some code in an exception handler
+* Bug fix: sometimes a log message would crash
+* Unit tests now added for regression testing
+
+### 1.20 - Aug 21, 2026
+* Bug fix: 3D Inlays: Sometimes the side projection includes extra points that mess up calculations and make the inlay not generate. Address that by walking profiles instead of taking the extents of the sketch.
+* Work around: attempt to not cache the CAM object anymore to address potential issues.
+* Potential bug fix: add a g_doNudgeFix internal file option in InlaySetupCommand.py based on feedback from one user; I haven't tested it enough to enable it all the time.
+* New warning: Warn if the user is using 3d sketches, which cause problems.
+
+### 1.19 - May 26, 2026
+* Bug Fix: Better metric support, because the values were too persistent in loading previous values and their associated units. Now if you switch units back and forth the dialog will reset the saved values.
+
+### 1.18 - April 21, 2026
+* Bug Fix: Fix an exception that was thrown in some cases when creating 3D inlays (ie: sphere half test case).
+
+### 1.17 - April 19, 2026
+* Bug Fix: Using clearance bits defined in mm were outputting a "rest machining" diameter in cm, but was marked as mm, which caused areas to be missed in the clearance op.
+
+### 1.16 - April 7, 2026
+* Bug Fix: Fix an orientation problem if profiles from multiple sketches are selected AND those sketches happen to have different z-orientations.
+* Bug Fix: Fix the Plug Profile sketch to be correct, in case multiple different sketches are used.
+* Bug Fix: Fix an assertion/error that would come up if the user doesn't have a view named "HOME" (ie: it is localized to another language, was renamed, or deleted). This is working around a Fusion bug, as the API should be localization gnostic, but is not.
+
+### 1.15 - March 10, 2026
+* Add back in support for 'Sketch Text' profiles
+* Fix some cases where the 3d plug was in the wrong direction
+
+### 1.14 - Feb 28, 2026
+* Fix "You must have an active Setup or CAM Folder!" error in CAM toolpaths
+
+### 1.13 - Feb 23, 2026
+* Fix for the free version: an exception was thrown because there is no Cloud Templates available in the free version.
+
+### 1.12 - Feb 23, 2026
+* Feature: All logic is now "template" driven, and the user can create and use their own templates
+* Feature: 2D Inlays can now select multiple target surfaces to create inlays within inlays
+* Feature: The ability to select multiple clearance bits
+* Feature: Multiple Depth option
+* Feature: Plug outset option
+* Feature/Update: All settings are saved and restored each time the plugin is run
+* Feature: Ability to swap x/y axis for the generated Setups
+* Bug Fix: deeper inlays work better when potentially intersecting parts of other components
+* Update: All generated sketches are now more isolated in their appropriate sub-components (ie: Plug related sketches are in the Plug component)
+* Update: The default stepovers were made smaller to machine more areas by default
+* Bug Fix: Setups for targeting an "existing" component will now have the stock size default to "no additional stock"
+* Bug Fixes: general bug fixes of things I found along the way
+
+### 1.11 - Jan 27, 2026
+* Bug Fix: Fix an exception that would show when NOT in Hybrid Mode
+
+### 1.10 - Jan 25, 2026
+* Bug Fix: every other profile detection a bit better
+* Give the user a warning about Hybrid mode needed instead of hiding the UI, which seems more confusing to people.
+
+### 1.9 - January 10, 2026
+* Bug fix: If the units are shown in Fractional "feet/inches" small values would get rounded to 0, having issues with the "Tolerance" ending up as 0.
+
+### 1.8 - January 9, 2026
+* Added the "Inlay Fit Adjustment" to the main plugin window.
+* Bug Fix: ignore construction lines in Sketches
+* Added support for auto updating for the Fusion Store version.
+* Code simplification
+
+### 1.7 - January 6, 2026
+* Selecting a sketch should now correctly select "every other profile", which is what people want for v-carves. The old heuristic was flawed.
+* When flipping the plug, automatically do a "Capture Position". It seems that most people want this to happen.
+
+### 1.6 - December 31, 2025
+* Attempt to fix "degenerate segment errors" again by copying the profiles instead of projecting; this process is a little less robust for profiles that overlap, but overlapping profiles in general are bad for v-carving.
+* Made "Copy Profiles" an option in case people liked the linked version
+* Fixed some edge cases where it wouldn't generate an inlay
+* **Added auto-updating!** This will be the last time you have to manually download it. It should auto update whenever I release a new version
+
+### 1.5 - December 19, 2025
+* Attempt to fix "degenerate segment errors" that sometimes arise. It seems to be a bug in Fusion with some specific designs, but I attempt to work around it. It will still happen with designs that have bad geometry/vectors (overlapping vectors or zero length vectors)
+* Rename from VCarve Inlay to VBit Inlay to avoid confusion with other software
+
+### 1.4 - December 11, 2025
+* Update: 2D Inlays now use 2D Toolpaths (Engrave and 2D Pocket), which are way way faster to generate, more consistent in how they work, and produce a much more efficient toolpath for flat inlays that take less time to machine.
+* Bug fix: some vectors weren't projecting right, so do it differently to work more consistently.
+* Bug fix: sometimes there were extrude errors in Fusion; work around this
+
+### 1.3 - November 10, 2025
+* Tool drop down is broken; it's a Fusion API bug. Work around it for now.
+
+### 1.2 - October 27, 2025
+* Bug Fix: Selecting an entire sketch will now "do the right thing" of selecting every other sketch (well, mostly…sometimes not always right)
+* Bug Fix: You can now do inlays-in-inlays; previously it would't work quite right if the target would generate holes.
+* Bug Fix: tapered ball nose error that was coming up: TypeError: unsupported operand type(s) for *=: 'FloatParameterValue' and 'float'
+* Bug Fix: The plugin should work a lot better on more abstract angles (ie: bottom, sides, odd angle planes, etc), as it was incorrectly using some values hardcoded for the z-plane
+* Bug Fix: Not using "Create New Component" would not generate a correct plug
+
+### 1.1 - October 22, 2025
+* Fixed "not a planar entity" error if the original sketch was another sketch
+* Project the plug via the plug profile instead of the plug body, which should fix some cases where the machining limits was inset incorrectly (instead of being outset)
+* Give better errors on SketchText entities that fail (Fusion bugs)
+* Allow tapered ball nose in the tool lists shown
+* Fixed some inlay within inlay issues
+
+### 1.0 - October 17, 2025
+* Initial Release
+
+
+
+
+<Footer />
