@@ -81,6 +81,7 @@
                 "sketch_commands_overview",
                 "round_offset_command",
                 "round_corners_command",
+                "round_all_corners_command",
                 "round_corners_behavior"]
 
           },
