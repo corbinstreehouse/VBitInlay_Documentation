@@ -40,6 +40,61 @@ A “Tapered Ball Nose” (TBN) bit will not work with the 2D Pocket operation u
 
 </Columns>
 
+
+## 2D Inlay: Toolpath Warning: Open countours have been detected.
+
+<Frame caption="Toolpath warning">
+<img
+    src="images/errors/open_contours_detected.png"
+    alt=""
+    className="block h-[168px] mx-auto rounded-lg"
+/>  
+</Frame>
+
+When this happens, sometimes the machined area is incorrect, going outside of the indented design area:
+
+<Frame caption="Incorrectly machined area">
+<img
+    src="images/errors/incorrect_machined_area.png"
+    alt=""
+    className="block h-[300px] mx-auto rounded-lg"
+/>  
+</Frame>
+
+The area is limited by the design vector, and generally this happens because the design vector has some areas that aren't connected quite perfectly. Fusion's Profile generation (ie: extrude) generally seems to be okay with these problems, but the toolpath generation is more sensative. It says to "Lower the chaining tolerance", which you can do by right clicking on the toolpath and selecting "Compare and Edit", finding the *Chaining Tolerance* and changing it -- however, I can't find a change that fixes the problem when I see this issue.
+
+To solve, I'd try these things, in this order
+* Prefer to use DXF over SVG for vector files - DXF seems to always work for me, whereas I'd see this problem in SVG
+* If the design is simple, change the Geometry from Sketch Profiles to selecting the pockets on the model. 
+* Uncheck **Copy Profiles** from the Other section of the plugin, and run it again -- this will use projection of the inlay instead of copying the profiles, which should work better for a situation like this, but may fail due to other problems.
+* See if you can fix your vectors by merging them in a program like Adobe Illustrator
+
+<Columns cols={2}>
+
+<Frame caption="Manual Pocket Selection to address the issue">
+  <img
+      src="images/errors/manual_pocket_selection.png"
+      alt=""
+      className="block mx-auto rounded-lg"
+  />  
+</Frame>
+<Frame caption="Corrected Toolpath">
+  <img
+      src="images/errors/open_contours_fixed.png"
+      alt=""
+      className="block  mx-auto rounded-lg"
+  />  
+</Frame>
+
+</Columns>
+
+<Note>
+    I'd like to write some vector processing that fixes up issues like this! If you encounter this issue, let me know, so I can make it a higher priority.
+</Note>
+
+
+
+
 ## 2D Inlay: Clearance toolpath leaving extra stock or ridge
 
 You may see clearance toolpath leaving a small ridge next to the v-carve toolpath and not cutting enough material. This is controlled by the radial “Stock to Leave” setup in the toolpath, and too much stock is set to leave; it is all controlled by parameters and math, so something is off.
@@ -54,11 +109,11 @@ You may see clearance toolpath leaving a small ridge next to the v-carve toolpat
 
 **Possible cause:** The `inlay_bit_angle` Parameter may not quite match the actual bit angle parameter. Make sure it is accurate!
 
-**Possible cause:** Your bit’s setup tip diameter doesn’t match the actual bit tip diameter (note the hack work around of using a small tip diameter of 0.001" for pure v-bits shouldn’t drastically affect this). **Or, the tip may have broken off**
+**Possible cause:** Your bit's setup tip diameter doesn't match the actual bit tip diameter (note the hack work around of using a small tip diameter of 0.001" for pure v-bits shouldn't drastically affect this). **Or, the tip may have broken off**
 
 **Possible cause:** Machine tolerances being too large; make sure your machine has little backlash (tight belts).
 
-If the above things don’t fix it, you can start modifying the parameters that control the “stock to leave” for the pocket toolpath. Modify the `plug_stock_to_leave` or the `pocket_stock_to_leave` Parameters (depending on which one you are having an issue with), and make the value smaller to have it remove more material:
+If the above things don't fix it, you can start modifying the parameters that control the “stock to leave” for the pocket toolpath. Modify the `plug_stock_to_leave` or the `pocket_stock_to_leave` Parameters (depending on which one you are having an issue with), and make the value smaller to have it remove more material:
 
 <Frame>
 <img
