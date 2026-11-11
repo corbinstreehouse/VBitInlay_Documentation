@@ -6,6 +6,17 @@ import Footer from "/shared/footer.mdx";
 
 Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric VCarve. Parameters vary by bit selection, wood species, wood orientation (face grain vs end grain), and the particular CNC machine. These are proven cut results that have worked for people. If you have something that works, [email me](mailto:corbin@corbinsworkshop.com)!
 
+
+<AccordionGroup>
+  <Accordion title="*Vectric VCarve*: I'll translate VBit Inlay parameters to VCarve. Click here for the general forumla.">
+* Pocket: start depth is 0, flat depth is `inlay_depth` (IE: How deep you want the inlay). 
+* `plug_surface_gap` can be whatever you want. (IE: How large gap above the plug is).
+* Plug Start depth: `inlay_depth - fit_adjustment`
+*	Plug Flat depth: `plug_surface_gap + fit_adjustment`
+  </Accordion>
+</AccordionGroup>
+
+
 <AccordionGroup>
   <Accordion title="15 Degree Engraving 0.005 Tip Width - Amana 45611-K" defaultOpen>
 [Purchase the bit: Amazon](https://amzn.to/4oeJ1Zo)
@@ -25,22 +36,24 @@ Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric 
   * `plug_base_thickness`: 0.250    
   </Accordion>
 
-<Accordion title="Parameters for 0.240\&quot; depth inlay">
+<Accordion title="Parameters for 0.240\&quot; (6mm) depth inlay">
   * `inlay_depth`: 0.240"
   * `inlay_fit_adjustment`: 0.090"
   * `plug_surface_gap`: 0.070"
   * `plug_base_thickness`: 0.240"   
   * `plug_fuzzy_cleanup`: 0.008" 
+  * `Vectric VCarve Plug`: Not sure about this one, as the surface_gap is too large...
   </Accordion>
 
 </AccordionGroup>
   </Accordion>
 
 </AccordionGroup>
+
 <AccordionGroup>
   
   <Accordion title="SpeTool W01005 5.26 Deg Tapered Angle Ball Nose 0.25mm Radius" defaultOpen>
- * [Purchase the bit: Amazon](https://amzn.to/4aNb1zP)
+ [Purchase the bit: Amazon](https://amzn.to/4aNb1zP)
 
 <AccordionGroup>
 
@@ -49,9 +62,11 @@ Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric 
   * Stepover: 0.0024 in    
   </Accordion>
 
-<Accordion title="Parameters for 0.240\&quot; depth inlay">
+<Accordion title="Parameters for 0.240\&quot; (6mm) depth inlay">
   * `inlay_depth`: 0.240"
+  * `surface_gap`: 0.050"
   * `inlay_fit_adjustment`: 0.000" to 0.005"
+  * `Vectric VCarve Plug`: Start Depth: 0.235” (5.97mm), Flat Depth: 0.055” (1.4mm)
   </Accordion>
 
   <Accordion title="Bit Tool Setup">
@@ -63,10 +78,12 @@ Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric 
 </Accordion>
 
 </AccordionGroup>
+
 <AccordionGroup>
   <Accordion title="30° 2 Flute V-Groove Bit - Bits&Bits (425-VG30)" defaultOpen>
  * [Bit link](https://bitsbits.com/product/425-vg30/)
  * 30 degree v-bit, 0" tip width (you must set a small tip width in the tool setup!)
+ * Parameters thanks to [Erickson Works](https://www.youtube.com/channel/UC2kEpsOUlCv-bWIX8Vh8PEg) - I haven't tried this bit myself
  <AccordionGroup>
 
   <Accordion title="Feeds and Speeds">
@@ -74,7 +91,7 @@ Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric 
   * Feed optimization: 5 degree change, 10 IPM
   </Accordion>
 
-  <Accordion title="Parameters for 0.240\&quot; depth inlay">
+  <Accordion title="Parameters for 0.240\&quot; (6mm) depth inlay">
   * `inlay_fit_adjustment`: 0.030"
   </Accordion>
 
@@ -84,6 +101,29 @@ Parameters that work well for the Autodesk Fusion VBit Inlay Plugin and Vectric 
 
 </AccordionGroup>
 
+
+
+<AccordionGroup>
+  <Accordion title="6.2 Deg TBN 1/32in Dia - Amana 46280" defaultOpen>
+ * [Bit link](https://link.amazon/B00aPVSu0)
+ <Note>I haven't tested this bit, parameters were reported via FB Groups</Note>
+ <AccordionGroup>
+
+  <Accordion title="Feeds and Speeds">
+  * End Grain: 12000 RPM / 40 IPM 
+  </Accordion>
+
+  <Accordion title="Parameters for 0.240\&quot; (6mm) depth inlay">
+  * `inlay_fit_adjustment`: 0.080"
+  * `surface_gap`: 0.060" (1.5mm) - slightly larger than what I usually do.
+  * `VCarve Plug Start Depth`: 0.160" (4mm), Flat Depth: 0.140" (3.5mm)
+  </Accordion>
+
+</AccordionGroup>
+  </Accordion>
+
+
+</AccordionGroup>
 
 
 
