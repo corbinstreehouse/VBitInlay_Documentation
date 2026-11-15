@@ -68,6 +68,7 @@ To solve, I'd try these things, in this order
 * If the design is simple, change the Geometry from Sketch Profiles to selecting the pockets on the model. 
 * Uncheck **Copy Profiles** from the Other section of the plugin, and run it again -- this will use projection of the inlay instead of copying the profiles, which should work better for a situation like this, but may fail due to other problems.
 * See if you can fix your vectors by merging them in a program like Adobe Illustrator
+* NOTE: This is an Autodesk bug, and has been reported to them in multiple ways: https://forums.autodesk.com/t5/fusion-support-forum/error-machining-area-constructed-from-a-tangent-extension-gouges/m-p/14345931 - if you can go to the Forum and also report that you are having the same issue it may help get it fixed!
 
 <Columns cols={2}>
 
@@ -89,7 +90,7 @@ To solve, I'd try these things, in this order
 </Columns>
 
 <Note>
-    I'd like to write some vector processing that fixes up issues like this! If you encounter this issue, let me know, so I can make it a higher priority.
+    Unfortunately, I can't figure out a way to fix the contours automatically; Fusion seems to interpret some guide lines (ie: bezier handles) as parts it should machine. 
 </Note>
 
 
